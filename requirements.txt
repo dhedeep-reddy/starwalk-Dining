@@ -1,0 +1,11 @@
+streamlit
+langchain-openai
+langchain-community
+langchain-huggingface
+supabase
+faiss-cpu
+pypdf
+python-dotenv
+pandas
+sqlalchemy
+reportlab

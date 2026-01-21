@@ -1,0 +1,95 @@
+/* Starwalk Dining - Luxury Noir & Gold Theme */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lato:wght@300;400&display=swap');
+
+/* Main Background - Deep Black */
+.stApp {
+    background-color: #0B0B0B;
+    color: #F5F5F5;
+}
+
+/* Sidebar - Charcoal */
+[data-testid="stSidebar"] {
+    background-color: #141414;
+    border-right: 1px solid #333;
+}
+
+/* Typography */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Playfair Display', serif !important;
+    color: #D4AF37 !important;
+    /* Royal Gold */
+    font-weight: 700;
+}
+
+p,
+label,
+.stMarkdown,
+.stText,
+li {
+    font-family: 'Lato', sans-serif !important;
+    color: #F5F5F5;
+    /* Warm White */
+}
+
+.stMarkdown a {
+    color: #4DA3FF !important;
+    /* Soft Blue for links */
+}
+
+/* Buttons */
+.stButton>button {
+    background-color: transparent !important;
+    color: #D4AF37 !important;
+    border: 1px solid #D4AF37 !important;
+    border-radius: 0px !important;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.3s ease;
+}
+
+.stButton>button:hover {
+    background-color: #D4AF37 !important;
+    color: #0B0B0B !important;
+    box-shadow: 0 0 10px #D4AF37;
+}
+
+/* Inputs */
+.stTextInput>div>div>input {
+    background-color: #1A1A1A !important;
+    color: #F5F5F5 !important;
+    border: 1px solid #333 !important;
+    border-radius: 4px !important;
+}
+
+.stTextInput>div>div>input:focus {
+    border-color: #D4AF37 !important;
+    box-shadow: none !important;
+}
+
+/* Dataframes/Tables */
+.stDataFrame {
+    border: 1px solid #333;
+}
+
+/* Custom Containers (Glassmorphism adjusted for noir) */
+.glass-container {
+    background: rgba(20, 20, 20, 0.8);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    /* Faint gold border */
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+/* Secondary Text */
+.small-text {
+    color: #B3B3B3 !important;
+    font-size: 0.85rem;
+}

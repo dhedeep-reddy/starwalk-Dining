@@ -1,0 +1,16 @@
+# Secrets
+.env
+
+# Python
+__pycache__/
+*.pyc
+venv/
+
+# Local Debug/Temp files
+temp_admin.pdf
+debug_auth.py
+generate_pdf.py
+
+# RAG Index (Optional: Include if you want pre-generated index, Exclude if you want to rebuild)
+# We will include it for now so it works out of the box
+# faiss_index/

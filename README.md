@@ -1,5 +1,10 @@
 # Starwalk Dining AI 🌟
 
+[![Streamlit App](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](https://dhedeep-reddy-starwalk-dining-app-mjwj6l.streamlit.app/)
+
+## Live Demo
+**Try it here:** [https://dhedeep-reddy-starwalk-dining-app-mjwj6l.streamlit.app/](https://dhedeep-reddy-starwalk-dining-app-mjwj6l.streamlit.app/)
+
 ## Introduction
 **Starwalk Dining** is a futuristic, AI-powered restaurant reservation system. It demonstrates the power of Agentic AI in handling end-to-end customer interactions, from answering queries about the menu using RAG (Retrieval Augmented Generation) to managing real-time table reservations via a database.
 

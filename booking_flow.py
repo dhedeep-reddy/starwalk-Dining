@@ -37,15 +37,22 @@ class BookingFlow:
             return f"Thanks {user_input}. What is your **Email** address?", False
 
         elif self.state == BookingState.COLLECT_EMAIL:
-            # Simple validation
-            if "@" not in user_input:
-                return "That doesn't look like a valid email. Please try again.", False
-            self.booking_data["email"] = user_input
+            # Robust Regex Validation
+            email_pattern = r"^[a-zA-Z0-9_.+-]+@[a-zA-Z0-9-]+\.[a-zA-Z0-9-.]+$"
+            if not re.match(email_pattern, user_input.strip()):
+                return "That doesn't look like a valid email address. Please try again (e.g., user@example.com).", False
+            
+            self.booking_data["email"] = user_input.strip()
             self.state = BookingState.COLLECT_PHONE
             return "Got it. What is your **Phone Number**?", False
 
         elif self.state == BookingState.COLLECT_PHONE:
-            self.booking_data["phone"] = user_input
+            # Validate Phone: Allow spaces/dashes/parens, but require at least 7 digits
+            digits_only = re.sub(r"\D", "", user_input)
+            if len(digits_only) < 7:
+                return "That phone number seems too short. Please enter a valid number (at least 7 digits).", False
+            
+            self.booking_data["phone"] = user_input.strip()
             self.state = BookingState.COLLECT_DATE
             return "Thanks. What **Date** would you like to book for? (e.g., Tomorrow, 2024-05-20)", False
 

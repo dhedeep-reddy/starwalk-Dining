@@ -25,10 +25,10 @@ The system is built on a modern Python stack optimized for rapid prototyping and
 graph TD
     User[User] -->|Interacts| UI[Streamlit Frontend]
     UI -->|Auth| Supabase[Supabase Auth & DB]
-    UI -->|Chat| LLM_Logic[Chat Logic (LangChain)]
+    UI -->|Chat| LLM_Logic["Chat Logic (LangChain)"]
     
     subgraph "AI Core"
-        LLM_Logic -->|Query| Azure[Azure OpenAI (GPT-4)]
+        LLM_Logic -->|Query| Azure["Azure OpenAI (GPT-4)"]
         LLM_Logic -->|Retrieve Context| RAG[RAG Pipeline]
         RAG -->|Vector Search| FAISS[FAISS Local Index]
         RAG -->|Embeddings| HF[HuggingFace Embeddings]

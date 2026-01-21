@@ -2,6 +2,7 @@ streamlit
 langchain-openai
 langchain-community
 langchain-huggingface
+sentence-transformers
 supabase
 faiss-cpu
 pypdf

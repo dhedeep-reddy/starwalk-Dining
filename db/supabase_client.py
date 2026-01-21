@@ -4,7 +4,7 @@ import sys
 
 # Add parent directory to path to import config
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '../..')))
-from AI_UseCase.config.config import Config
+from config.config import Config
 
 class SupabaseManager:
     def __init__(self):

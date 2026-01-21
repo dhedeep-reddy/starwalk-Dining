@@ -3,11 +3,11 @@ import os
 from langchain_openai import AzureChatOpenAI
 from langchain_core.messages import SystemMessage, HumanMessage
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from AI_UseCase.config.config import Config
-from AI_UseCase.rag_pipeline import RAGPipeline
-from AI_UseCase.booking_flow import BookingFlow, BookingState
-from AI_UseCase.db.supabase_client import SupabaseManager
-from AI_UseCase.utils.email_sender import send_confirmation_email
+from config.config import Config
+from rag_pipeline import RAGPipeline
+from booking_flow import BookingFlow, BookingState
+from db.supabase_client import SupabaseManager
+from utils.email_sender import send_confirmation_email
 
 class ChatLogic:
     def __init__(self):

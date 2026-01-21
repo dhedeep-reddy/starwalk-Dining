@@ -3,8 +3,8 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from AI_UseCase.db.supabase_client import SupabaseManager
-from AI_UseCase.chat_logic import ChatLogic
+from db.supabase_client import SupabaseManager
+from chat_logic import ChatLogic
 
 st.set_page_config(page_title="Admin Dashboard - Starwalk Dining", page_icon="🔒", layout="wide")
 

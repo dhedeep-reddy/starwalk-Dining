@@ -4,7 +4,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from AI_UseCase.db.supabase_client import SupabaseManager
+from db.supabase_client import SupabaseManager
 
 st.set_page_config(page_title="Register - Starwalk Dining", page_icon="📝")
 
@@ -52,7 +52,7 @@ with st.container():
                         
                         if not d_url or not d_key:
                              # Fallback to config if env not direct (shouldn't happen with .env loaded)
-                             from AI_UseCase.config.config import Config
+                             from config.config import Config
                              d_url = Config.SUPABASE_URL
                              d_key = Config.SUPABASE_KEY
 

@@ -4,7 +4,7 @@ import os
 import sys
 
 sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
-from AI_UseCase.db.supabase_client import SupabaseManager
+from db.supabase_client import SupabaseManager
 
 st.set_page_config(page_title="Login - Starwalk Dining", page_icon="🔑")
 

@@ -50,7 +50,18 @@ class BookingFlow:
             return "Thanks. What **Date** would you like to book for? (e.g., Tomorrow, 2024-05-20)", False
 
         elif self.state == BookingState.COLLECT_DATE:
-            self.booking_data["date"] = user_input
+            raw_date = user_input.lower().strip()
+            
+            # Simple heuristic validation
+            # Reject inputs that look like Times (contain am/pm and length < 8)
+            if ("am" in raw_date or "pm" in raw_date) and len(raw_date) < 10:
+                 return "That looks like a time! Please enter a **Date** (e.g., Tomorrow, Monday, or 2024-05-20).", False
+            
+            # Reject very short inputs unless 'may'
+            if len(raw_date) < 3:
+                 return "Please enter a valid date (e.g., Tomorrow, Next Friday, 2024-05-20).", False
+                 
+            self.booking_data["date"] = user_input # In a real app, we would parse this to YYYY-MM-DD here
             self.state = BookingState.COLLECT_TIME
             return "What **Time** would you like?", False
 
